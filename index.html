@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+
+        <header class="title">
+            <h1>Kalkulator BMI</h1>
+        </header>
+        
+        <article>
+            <p>Sudah idealkah badanmu?</p>
+        </article>
+    </nav>
+
+    <main>
+        <section class="left">
+            <!-- Radio Button -->
+            <section class="gender">
+                <article>
+                    <p>Tentukan jenis kelaminmu :</p>
+                </article>
+                <input type="radio" id="select-pria"><label for="select-pria">Pria</label>
+                <input type="radio" id="select-wanita"><label for="select-wanita">Wanita</label>
+            </section>
+
+            <!-- form -->
+            <section class="form">
+                <form action="">
+                    <label for="berat">Usia (tahun)</label>
+                    <input type="number" id="usia" name="usia" required>
+                    <label for="berat">Berat badan (kg)</label>
+                    <input type="number" id="berat" name="berat" required>
+                    <label for="tinggi">Tinggi (cm)</label>
+                    <input type="number" id="tinggi" name="tinggi" required>
+                    <button id="btnHitung" type="submit" onclick="hitungBMI()">Hitung</button>
+                </form>
+            </section>
+
+        </section>
+
+        <!-- output -->
+        <section>
+            <header>
+                <p>Hasil BMI-mu adalah</p>
+            </header>
+            <h2 id="hasilBMI"></h2>
+            <article>
+                <p>Hasil BMI-mu adalah Normal</p>
+                <p>Beberapa tips untuk kesehatan tubuhmu antara lain ....</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
