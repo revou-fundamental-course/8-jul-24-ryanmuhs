@@ -1,30 +1,104 @@
-body{
+body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
 }
 
-.main-title{
+.main-title {
     text-align: center;
 }
 
-nav{
+nav {
     text-align: center;
 }
-main{
+
+main {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
-.left{
-    width: 50%;
+.desc {
+    width: 60%;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.left {
+    width: 60%;
     display: flex;
     flex-direction: column;
 }
 
-.form input{
+.gender {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-gender {
+    display: flex;
+    flex-direction: column;
+    width: 7em;
+    margin: .5rem;
+    height: 7em;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.input-gender input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.input-gender input:checked ~ .material-symbols-outlined,
+.input-gender input:checked ~ label,
+.input-gender input:checked {
+    background-color: green;
+    color: white;
+    border-color: white;
+}
+
+.form input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
+    transition: .5s;
     border-radius: 5px;
+}
+
+.form input[type=number]:focus {
+    border: 3px solid #555;
+}
+
+.form button{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #4CAF50;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.resultBMI {
+    display: none; /* Sembunyikan dari awal */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background-color: bisque;
+    width: 60%; /* Tambahkan lebar untuk keselarasan */
+    padding: 10px; /* Tambahkan padding untuk kenyamanan */
+}
+
+#tipsBMI {
+    text-align: start;
 }
